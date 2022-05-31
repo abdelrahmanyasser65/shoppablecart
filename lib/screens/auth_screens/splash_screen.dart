@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppablecart/auth_screens/login_screen.dart';
 import 'package:shoppablecart/components/components.dart';
+import 'package:shoppablecart/screens/auth_screens/login_screen.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 

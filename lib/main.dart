@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shoppablecart/auth_screens/splash_screen.dart';
+import 'package:shoppablecart/screens/auth_screens/register_screen.dart';
+import 'package:shoppablecart/screens/home_screens/home_layout.dart';
+import 'package:shoppablecart/screens/home_screens/home_screen.dart';
+import 'package:shoppablecart/screens/home_screens/product_details.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch:Colors.grey,
 
       ),
-      home: const SplashScreen(),
+      home:  HomeScreen(),
 
     );
   }

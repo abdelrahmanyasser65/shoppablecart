@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:shoppablecart/auth_screens/register_screen.dart';
 import 'package:shoppablecart/components/components.dart';
+import 'package:shoppablecart/screens/auth_screens/register_screen.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -17,8 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:HexColor('#F5F5F5'),
-      
+      backgroundColor:const Color.fromRGBO(255, 255, 255, 0.97),
       body: SingleChildScrollView(
         padding:const EdgeInsets.only(
           top: 125,

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-
-import '../components/components.dart';
+import 'package:shoppablecart/components/components.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -19,7 +17,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:HexColor('#F5F5F5'),
+      backgroundColor:const Color.fromRGBO(255, 255, 255, 0.97),
       body:  SingleChildScrollView(
         padding:const EdgeInsets.only(
             top: 80,

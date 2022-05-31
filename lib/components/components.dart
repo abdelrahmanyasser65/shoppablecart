@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 class EElevatedButton extends StatefulWidget {
@@ -53,6 +51,6 @@ Widget defultText({String? data}) {
   );
 }
 
-void navigateTo (context,widget)=>Navigator.push(context,
+void navigateTo (context,widget)=> Navigator.push(context,
     MaterialPageRoute(builder: (context)=>widget));
 
