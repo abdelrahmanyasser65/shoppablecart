@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch:Colors.grey,
 
       ),
-      home:  CategoryResult(),
+      home:  HomeLayout(),
 
     );
   }
