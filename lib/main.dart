@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoppablecart/screens/checkout/checkot_address.dart';
 import 'package:shoppablecart/screens/checkout/checkout_delivery.dart';
+import 'package:shoppablecart/screens/checkout/checkout_ordersummary.dart';
 import 'package:shoppablecart/screens/home_screens/home_layout.dart';
 
 void main(){
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch:Colors.grey,
 
       ),
-      home:  CheckoutDelivery(),
+      home:  CheckoutOrderSummary(),
 
     );
   }
