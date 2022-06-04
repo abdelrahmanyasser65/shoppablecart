@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoppablecart/components/components.dart';
+import 'package:shoppablecart/screens/checkout/checkout_delivery.dart';
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
 
@@ -93,7 +94,9 @@ DismissDirection ?dir;
                     text: 'CHECKOUT',
                     prColor: '#092547',
                     textColor: Colors.white,
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const CheckoutDelivery()));
+                    },
                     radius: 3,
                     width: 110,
                     height: 50)

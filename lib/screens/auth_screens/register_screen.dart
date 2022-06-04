@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoppablecart/components/components.dart';
+import 'package:shoppablecart/screens/home_screens/home_layout.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -113,7 +114,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       prColor: '#092547',
                       textColor: Colors.white,
                       onPressed:(email.isNotEmpty&&
-                          password.length>6&&name.isNotEmpty)? (){}:null,
+                          password.length>6&&name.isNotEmpty)? (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeLayout(0)));
+                      }:null,
                       width: 311,
                       height: 50),
                 ],

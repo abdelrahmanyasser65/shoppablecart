@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:shoppablecart/screens/home_screens/category_result.dart';
+import 'package:shoppablecart/screens/home_screens/product_details.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -47,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:const Color.fromRGBO(255, 255, 255, 0),
       body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -90,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
              Expanded(
 
                child: SingleChildScrollView(
-                 padding: EdgeInsets.only(
+                 padding:const EdgeInsets.only(
                    bottom: 10
                  ),
                  child: Column(
@@ -151,25 +153,32 @@ class _HomeScreenState extends State<HomeScreen> {
       
     );
   }
-  Widget buidlcategories(index)=>SizedBox(
+  Widget buidlcategories(index)=>InkWell(
+    onTap: (){
+      index==0?
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails())):null;
+          index==2? Navigator.push(context, MaterialPageRoute(builder: (context)=>const CategoryResult())):null;
+    },
+    child: SizedBox(
 
-    height:89 ,width:60 ,
-    child: Column(
-      children: [
-        Container(
-          decoration:const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white
+      height:89 ,width:60 ,
+      child: Column(
+        children: [
+          Container(
+            decoration:const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white
+            ),
+            height: 60,width: 60,
+            child:Image(image:AssetImage(images[index]),),
+
           ),
-          height: 60,width: 60,
-          child:Image(image:AssetImage(images[index]),),
-
-        ),
-        const SizedBox(height: 13,),
-        Text(titles[index],style:const
-        TextStyle(fontWeight:FontWeight.w400,
-            fontSize: 14),)
-      ],
+          const SizedBox(height: 13,),
+          Text(titles[index],style:const
+          TextStyle(fontWeight:FontWeight.w400,
+              fontSize: 14),)
+        ],
+      ),
     ),
   );
   Widget builditems(index)=>Container(
